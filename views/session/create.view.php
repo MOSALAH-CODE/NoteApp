@@ -45,6 +45,8 @@
                 </div>
 
                 <ul>
+                    <?= dd($errors) ?>
+
                     <?php if (isset($errors['email'])) : ?>
                         <li class="text-red-500 text-xs mt-2"><?= $errors['email'] ?></li>
                     <?php endif; ?>
