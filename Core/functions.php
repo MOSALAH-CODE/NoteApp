@@ -45,3 +45,14 @@ function view($path, $attributes = [])
 
     require base_path('views/' . $path);
 }
+
+function redirect($path)
+{
+    header("location: {$path}");
+    exit();
+}
+
+function old($key, $default = '')
+{
+    return Core\Session::get('old')[$key] ?? $default;
+}
